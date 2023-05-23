@@ -53,8 +53,8 @@ def get_film_detail(film_url):
     quality = film_detail_doc.find("span", class_="quality").text
     link = film_url
     release_date = film_detail_doc.find("span", itemprop="dateCreated").text
-    film_type = ""
-    runtime = ""
+    film_type = film_detail_doc.find("i", class_="type").text
+    runtime = film_detail_doc.find("div", class_="meta").contents[5].text
     similar_movies = []
 
     # ToDo: Get similar movies
@@ -81,5 +81,5 @@ def get_film_detail(film_url):
     print(json_output)
 
 
-print(search_film(search_query="John Wick"))
-# get_film_detail(film_url="https://fmovies.wtf/movie/john-wick-npnn")
+# print(search_film(search_query="John Wick"))
+get_film_detail(film_url="https://fmovies.wtf/movie/john-wick-npnn")
