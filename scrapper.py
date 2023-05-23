@@ -81,5 +81,5 @@ def get_film_detail(film_url):
     return json_output
 
 
-# print(search_film(search_query="John Wick"))
-# print(get_film_detail(film_url="https://fmovies.wtf/movie/john-wick-npnn"))
+print(search_film(search_query="Terminator"))
+print(get_film_detail(film_url="https://fmovies.wtf/movie/john-wick-npnn"))
