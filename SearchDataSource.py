@@ -8,9 +8,8 @@ class SearchDataSource:
 
         query = str(search_query).replace(" ", "+")
         url = "https://fmovies.wtf/search?keyword=" + query + "&vrf=R7Kdeg9L%2B54CAw%3D%3D"
-        print(url)
 
-        with open("result.html", "r") as result:
+        with open("search_result.html", "r") as result:
             return result.read()
 
         # ToDo: Get data from real data source
