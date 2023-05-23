@@ -78,8 +78,8 @@ def get_film_detail(film_url):
 
     json_output = json.dumps(film_detail, default=lambda obj: obj.__dict__)
 
-    print(json_output)
+    return json_output
 
 
 # print(search_film(search_query="John Wick"))
-get_film_detail(film_url="https://fmovies.wtf/movie/john-wick-npnn")
+# print(get_film_detail(film_url="https://fmovies.wtf/movie/john-wick-npnn"))
