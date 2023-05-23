@@ -8,7 +8,7 @@ from SearchDataSource import SearchDataSource
 host_url = "https://fmovies.wtf"
 
 
-def search_result(search_query):
+def search_film(search_query):
     search_datasource = SearchDataSource()
 
     search_result = []
@@ -38,9 +38,8 @@ def search_result(search_query):
         search_result.append(film)
 
     json_output = json.dumps(search_result, default=lambda obj: obj.__dict__)
-    print(json_output)
 
-    # print(search_result[0])
+    return json_output
 
 
-search_result(search_query="terminator")
+print(search_film(search_query="John Wick"))
